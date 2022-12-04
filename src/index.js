@@ -9,12 +9,14 @@ document.addEventListener("DOMContentLoaded", () => {
       event.preventDefault();
       //gets value from inpt field
       newTask = event.target.querySelector('#new-task-description').value
+      //check option selected
       priority = event.target.querySelector('#priority option:checked').value
       //calls function to add task to list
       let list = document.createElement("li")
       let ul = document.querySelector("#tasks")
       ul.appendChild(list)
       list.textContent = newTask
+      //color text on selected priority
       list.style.color = priority
     })
 });
